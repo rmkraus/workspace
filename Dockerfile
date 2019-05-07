@@ -32,6 +32,7 @@ RUN dnf install -y \
         python3-boto \
         python3-virtualenv \
         python3-virtualenvwrapper \
+        tmux \
         unzip \
         vim \
         wget \
