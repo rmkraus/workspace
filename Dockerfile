@@ -23,6 +23,7 @@ RUN dnf update -y; \
         iputils \
         lastpass-cli \
         less \
+        letsencrypt \
         make \
         net-tools \
         openssh \
@@ -32,6 +33,7 @@ RUN dnf update -y; \
         python2-virtualenv \
         python3-boto \
         python3-dns \
+        python3-dns-lexicon \
         python3-virtualenv \
         python3-virtualenvwrapper \
         tmux \
