@@ -1,6 +1,6 @@
 FROM docker.io/library/fedora:30
 
-ARG tfvers='0.11.13'
+ARG tfvers='0.11.14'
 ARG user=demo
 ARG uid=1000
 ARG gid=1000
@@ -11,7 +11,8 @@ RUN \
     useradd -d /home/${user} -s /bin/bash -u ${uid} -g ${gid} ${user}
 
 # Install dependencies
-RUN dnf install -y \
+RUN dnf update -y; \
+    dnf install -y \
         ansible \
         awscli \
         bash \
@@ -30,6 +31,7 @@ RUN dnf install -y \
         python2-boto \
         python2-virtualenv \
         python3-boto \
+        python3-dns \
         python3-virtualenv \
         python3-virtualenvwrapper \
         tmux \
