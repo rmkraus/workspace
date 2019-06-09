@@ -11,36 +11,43 @@ RUN \
     useradd -d /home/${user} -s /bin/bash -u ${uid} -g ${gid} ${user}
 
 # Install dependencies
-RUN dnf update -y; \
-    dnf install -y \
+RUN dnf update -y;
+RUN dnf install -y \
         ansible \
         awscli \
         bash \
         bind-utils \
         docker \
+        gcc \
         git \
         hostname \
         iputils \
         lastpass-cli \
         less \
         letsencrypt \
+        libxml2 \
+        libxml2-devel \
         make \
         net-tools \
         openssh \
         openssh-clients \
         podman \
         python2-boto \
+        python2-pycurl \
         python2-virtualenv \
         python3-boto \
         python3-dns \
         python3-dns-lexicon \
+        python3-pycurl \
         python3-virtualenv \
         python3-virtualenvwrapper \
         tmux \
         unzip \
         vim \
         wget \
-        zip
+        zip; \
+    pip install ovirt-engine-sdk-python; \
+    pip3 install ovirt-engine-sdk-python;
 
 # Install Terraform
 RUN \
