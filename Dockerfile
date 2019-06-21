@@ -25,12 +25,14 @@ RUN dnf install -y \
         lastpass-cli \
         less \
         letsencrypt \
+        libcurl-devel \
         libxml2 \
         libxml2-devel \
         make \
         net-tools \
         openssh \
         openssh-clients \
+        openssl-devel \
         podman \
         python2-boto \
         python2-pycurl \
